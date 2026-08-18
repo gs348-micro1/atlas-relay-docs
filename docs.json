@@ -22,6 +22,7 @@
         "group": "Guides",
         "pages": [
           "guides/event-destinations",
+          "guides/event-destination-retries",
           "guides/classic-webhooks",
           "guides/error-handling",
           "guides/signature-verification",
@@ -33,6 +34,7 @@
         "group": "Reference",
         "pages": [
           "reference/events",
+          "reference/delivery-attempts",
           "reference/cli",
           "reference/api-authentication",
           "reference/rate-limits",
