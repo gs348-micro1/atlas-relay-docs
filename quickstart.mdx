@@ -1,6 +1,6 @@
 ---
-title: Quickstart
-description: Send your first Atlas Relay event.
+title: "Quickstart"
+description: "Send your first Atlas Relay event."
 ---
 
 # Quickstart
@@ -12,10 +12,13 @@ npm install --global @atlas-relay/cli
 atlas auth login
 ```
 
-Create a Classic Webhook for your application:
+Create an Event Destination for your application:
 
 ```bash
-atlas webhooks create --url https://example.com/atlas/events
+atlas destinations create \
+  --name quickstart \
+  --endpoint https://example.com/atlas/events \
+  --events invoice.created
 ```
 
-Copy the returned webhook ID, then send a sample event. For delivery options, see [Classic Webhooks](/guides/classic-webhooks).
+Store the returned signing secret, then send a sample event. For delivery options, see [Configure an Event Destination](/guides/event-destinations).
