@@ -1,0 +1,18 @@
+---
+title: Configure destination retries
+description: Tune retries for temporary endpoint failures.
+---
+
+# Configure destination retries
+
+Event Destinations retry responses with status `408`, `425`, `429`, and `5xx`. The default policy makes six attempts with exponential backoff over approximately one hour.
+
+Use a custom policy when the receiving system has a documented recovery window:
+
+```bash
+atlas destinations update billing-events \
+  --retry-attempts 8 \
+  --retry-window 4h
+```
+
+Do not retry permanent `4xx` responses. Monitor individual requests through [delivery attempts](/reference/delivery-attempts).

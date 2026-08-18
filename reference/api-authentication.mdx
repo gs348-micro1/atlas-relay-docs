@@ -1,0 +1,14 @@
+---
+title: API authentication
+description: Authenticate requests to the Atlas Relay API.
+---
+
+# API authentication
+
+Send a project token in the `Authorization` header:
+
+```http
+Authorization: Bearer atlas_project_token
+```
+
+Create separate tokens for development and production. Restrict each token to the smallest required set of permissions and rotate it on a regular schedule.

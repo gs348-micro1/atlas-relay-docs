@@ -1,0 +1,10 @@
+---
+title: Delivery attempt object
+description: Request and response metadata recorded for each delivery attempt.
+---
+
+# Delivery attempt object
+
+A delivery attempt records `attempt_number`, `started_at`, `completed_at`, `response_status`, and `next_attempt_at`. Request and response bodies are not retained.
+
+The final attempt has no `next_attempt_at`. A successful `2xx` response sets the parent delivery state to `delivered`; an exhausted retry policy sets it to `failed`.

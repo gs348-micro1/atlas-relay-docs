@@ -1,0 +1,10 @@
+---
+title: Verify delivery signatures
+description: Confirm that incoming events were sent by Atlas Relay.
+---
+
+# Verify delivery signatures
+
+Every Event Destination request includes an `Atlas-Signature` header. Compute an HMAC-SHA256 digest over the raw request body with the destination signing secret, then compare digests using a constant-time function.
+
+Reject requests whose timestamp is more than five minutes old. Keep the current and previous secrets available during a planned rotation so in-flight deliveries continue to verify.

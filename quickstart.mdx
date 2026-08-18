@@ -1,0 +1,21 @@
+---
+title: Quickstart
+description: Send your first Atlas Relay event.
+---
+
+# Quickstart
+
+Install the CLI and sign in:
+
+```bash
+npm install --global @atlas-relay/cli
+atlas auth login
+```
+
+Create a Classic Webhook for your application:
+
+```bash
+atlas webhooks create --url https://example.com/atlas/events
+```
+
+Copy the returned webhook ID, then send a sample event. For delivery options, see [Classic Webhooks](/guides/classic-webhooks).

@@ -1,0 +1,12 @@
+---
+title: Handle delivery errors
+description: Return useful responses and recover from delivery failures.
+---
+
+# Handle delivery errors
+
+Return a `2xx` response only after your application has durably accepted the event. Use `4xx` for permanent rejection and `5xx` when Atlas Relay should retry.
+
+Make handlers idempotent because network failures can cause a successful request to be delivered again. Use the event ID as the idempotency key and retain it for at least seven days.
+
+Consult the [error reference](/reference/errors) when a delivery does not behave as expected.

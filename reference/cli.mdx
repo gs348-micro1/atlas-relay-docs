@@ -1,0 +1,22 @@
+---
+title: CLI reference
+description: Common Atlas Relay CLI commands.
+---
+
+# CLI reference
+
+## Authentication
+
+- `atlas auth login` opens a browser sign-in flow.
+- `atlas auth status` prints the active organization and environment.
+
+## Classic Webhooks
+
+- `atlas webhooks create --url <url>` creates a webhook.
+- `atlas webhooks list` lists configured webhooks.
+- `atlas webhooks rotate-secret <id>` rotates a webhook signing secret.
+
+## Events
+
+- `atlas events send --type <type>` sends an event.
+- `atlas events get <id>` retrieves event metadata.

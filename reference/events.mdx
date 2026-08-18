@@ -1,0 +1,10 @@
+---
+title: Event object
+description: Fields included in every Atlas Relay event.
+---
+
+# Event object
+
+Every event contains an immutable `id`, a `type`, an ISO 8601 `created_at` timestamp, and a versioned `data` object. The `environment` field is either `development` or `production`.
+
+Consumers should ignore unknown fields and route behavior by event type and schema version.

@@ -1,0 +1,10 @@
+---
+title: Local development
+description: Receive Atlas Relay events on a local service.
+---
+
+# Local development
+
+Expose your local HTTP handler through a trusted HTTPS tunnel, then create a development-only Event Destination for that URL. Limit its filter to non-production events.
+
+Rotate the destination secret and delete the tunnel URL when the development session ends. Never reuse production signing secrets in local environments.

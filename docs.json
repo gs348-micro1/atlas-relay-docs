@@ -1,0 +1,52 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Atlas Relay",
+  "description": "Build and operate reliable event delivery with Atlas Relay.",
+  "colors": {
+    "primary": "#0F766E",
+    "light": "#14B8A6",
+    "dark": "#115E59"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get started",
+        "pages": ["index", "quickstart"]
+      },
+      {
+        "group": "Concepts",
+        "pages": ["concepts/event-destinations", "concepts/delivery-lifecycle"]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "guides/event-destinations",
+          "guides/classic-webhooks",
+          "guides/error-handling",
+          "guides/signature-verification",
+          "guides/testing-events",
+          "guides/local-development"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "reference/events",
+          "reference/cli",
+          "reference/api-authentication",
+          "reference/rate-limits",
+          "reference/errors"
+        ]
+      },
+      {
+        "group": "Updates",
+        "pages": ["changelog/2026-07"]
+      },
+      {
+        "group": "Help",
+        "pages": ["support"]
+      }
+    ]
+  }
+}

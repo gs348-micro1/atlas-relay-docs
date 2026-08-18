@@ -1,0 +1,14 @@
+---
+title: Test event delivery
+description: Send a controlled event to a destination.
+---
+
+# Test event delivery
+
+Send a test payload before enabling production filters:
+
+```bash
+atlas destinations test billing-events --event invoice.created
+```
+
+The command returns an event ID and delivery ID. Confirm the response code in the destination's delivery history and verify that the receiving application recorded the same event ID.

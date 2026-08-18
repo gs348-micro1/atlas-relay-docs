@@ -1,0 +1,10 @@
+---
+title: Rate limits
+description: Request limits for the Atlas Relay API.
+---
+
+# Rate limits
+
+API responses include `RateLimit-Limit`, `RateLimit-Remaining`, and `RateLimit-Reset` headers. When a request returns `429`, wait until the reset time and retry with jitter.
+
+Event ingestion and management endpoints use separate limits so configuration work does not interrupt event delivery.

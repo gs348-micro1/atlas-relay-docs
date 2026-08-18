@@ -1,0 +1,10 @@
+---
+title: Delivery lifecycle
+description: Understand how Atlas Relay queues, attempts, and completes deliveries.
+---
+
+# Delivery lifecycle
+
+Atlas Relay accepts an event, evaluates destination filters, and creates one delivery per matching destination. A delivery can move through `queued`, `attempting`, `delivered`, or `failed` states.
+
+Temporary failures are retried according to the destination policy. See [delivery attempts](/reference/delivery-attempts) for the fields recorded for every request and response.

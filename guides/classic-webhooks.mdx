@@ -1,0 +1,18 @@
+---
+title: Configure Classic Webhooks
+description: Send events to your application with Classic Webhooks.
+---
+
+# Configure Classic Webhooks
+
+Classic Webhooks deliver selected Atlas Relay events to an HTTPS endpoint. Create one with the CLI:
+
+```bash
+atlas webhooks create \
+  --url https://example.com/atlas/events \
+  --events invoice.created,invoice.paid
+```
+
+Use `atlas webhooks list` to find the webhook ID and `atlas webhooks rotate-secret` to issue a new signing secret. Store the secret in your application's secret manager.
+
+After setup, review [signature verification](/guides/signature-verification).

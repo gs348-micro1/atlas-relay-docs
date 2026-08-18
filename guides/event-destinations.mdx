@@ -1,0 +1,19 @@
+---
+title: Configure an Event Destination
+description: Route selected events to an HTTPS endpoint.
+---
+
+# Configure an Event Destination
+
+Create a destination with a stable HTTPS endpoint:
+
+```bash
+atlas destinations create \
+  --name billing-events \
+  --endpoint https://example.com/atlas/events \
+  --events invoice.created,invoice.paid
+```
+
+Store the returned signing secret in your secret manager. Verify the first request before enabling the destination for production traffic.
+
+For transient failures, configure the [destination retry policy](/guides/event-destination-retries). To test without customer traffic, follow [Test event delivery](/guides/testing-events).
