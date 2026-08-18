@@ -2,6 +2,8 @@
 
 This repository contains the source for the Atlas Relay developer documentation.
 
+The published site is available at `https://atlas-relay-docs.mintlify.app`.
+
 ## Local preview
 
 Install the Mintlify CLI, then run `mint dev` from the repository root. Open pull requests for content or navigation changes; the deploy branch is protected.
