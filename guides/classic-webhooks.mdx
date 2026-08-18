@@ -1,18 +1,19 @@
 ---
-title: Configure Classic Webhooks
-description: Send events to your application with Classic Webhooks.
+title: "Classic Webhooks (retired)"
+description: "Classic Webhooks were retired in July 2026. Use Event Destinations instead."
 ---
 
-# Configure Classic Webhooks
+# Classic Webhooks (retired)
 
-Classic Webhooks deliver selected Atlas Relay events to an HTTPS endpoint. Create one with the CLI:
+Classic Webhooks were retired on July 31, 2026. Existing endpoints were migrated to Event Destinations automatically, and the `atlas webhooks` command group was removed from the CLI.
+
+To route events to an HTTPS endpoint, create an [Event Destination](/concepts/event-destinations):
 
 ```bash
-atlas webhooks create \
-  --url https://example.com/atlas/events \
+atlas destinations create \
+  --name billing-events \
+  --endpoint https://example.com/atlas/events \
   --events invoice.created,invoice.paid
 ```
 
-Use `atlas webhooks list` to find the webhook ID and `atlas webhooks rotate-secret` to issue a new signing secret. Store the secret in your application's secret manager.
-
-After setup, review [signature verification](/guides/signature-verification).
+Follow [Configure an Event Destination](/guides/event-destinations) to get started, and see the [July 2026 changelog](/changelog/2026-07) for details about the retirement.
